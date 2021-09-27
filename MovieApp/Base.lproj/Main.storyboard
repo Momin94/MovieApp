@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="movieimage" image="movieImage" translatesAutoresizingMaskIntoConstraints="NO" id="caI-Ki-KQt">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="movieimage" image="TestImageLarge.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="caI-Ki-KQt">
                                         <rect key="frame" x="0.0" y="10" width="390" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -174,7 +174,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="movieImage" width="126.66666412353516" height="190"/>
+        <image name="TestImageLarge.jpg" width="5250" height="3450"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
