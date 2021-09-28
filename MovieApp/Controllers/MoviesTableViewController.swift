@@ -9,37 +9,30 @@ import UIKit
 
 import SDWebImage
 
-
-
 class MoviesTableViewController: UITableViewController {
-
-    @IBOutlet weak var MovieTable: UITableView!
+    @IBOutlet var MovieTable: UITableView!
     var MovieVMarray = [MovieViewModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "movieCell")
-       
-        self.getData()
-      
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "movieCell")
+
+        getData()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
 
-    func getData()
-    {
-        ApiService.shareInstance.getPopularMovies {(movies, error) in
-            if (error == nil)
-          {
-                self.MovieVMarray = movies.map({ return MovieViewModel(movie: $0) })
+    func getData() {
+        ApiService.shareInstance.getPopularMovies { movies, error in
+            if error == nil {
+                self.MovieVMarray = movies.map({ MovieViewModel(movie: $0) })
                 DispatchQueue.main.async {
                     self.MovieTable.reloadData()
                 }
-          }
-            else{
+            } else {
                 print(movies)
             }
         }
@@ -49,7 +42,6 @@ class MoviesTableViewController: UITableViewController {
         return MovieVMarray.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
         let MVM = MovieVMarray[indexPath.row]
@@ -57,25 +49,21 @@ class MoviesTableViewController: UITableViewController {
         cell.imageView?.sd_setImage(with: imageURL)
         cell.textLabel?.text = MVM.title
         cell.accessoryType = .detailDisclosureButton
-                return cell
+        return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationController = storyboard.instantiateViewController(withIdentifier: "moviedetail") as! MovieDetailsViewController
         let movieIndex = indexPath.row
-        
-        destinationController.movieGenreText = //MovieVMarray[movieIndex].genreIDS.description
-            MovieVMarray[movieIndex].voteCount.description
+
+        destinationController.movieGenreText = MovieVMarray[movieIndex].voteAverage.description
         destinationController.movieDateText = MovieVMarray[movieIndex].releaseDate
         destinationController.movieOverviewText = MovieVMarray[movieIndex].overview
         destinationController.movieTitleText = MovieVMarray[movieIndex].title
         let imageURL = "https://image.tmdb.org/t/p/w500/\(MovieVMarray[movieIndex].posterPath)"
         destinationController.movieImageText = imageURL
-        
-        self.navigationController?.show(destinationController, sender: self)
-        
-    }
 
+        navigationController?.show(destinationController, sender: self)
+    }
 }

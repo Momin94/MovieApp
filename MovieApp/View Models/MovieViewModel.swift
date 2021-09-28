@@ -7,8 +7,7 @@
 
 import UIKit
 
-class MovieViewModel: NSObject
-{
+class MovieViewModel: NSObject {
     let adult: Bool
     let backdropPath: String
     let genreIDS: [Int]
@@ -21,22 +20,22 @@ class MovieViewModel: NSObject
     let voteAverage: Double
     let voteCount: Int
 
-    //dependecny injection here
-    
+    // dependecny injection here
+
     init(movie: Result) {
-        self.adult = movie.adult
-        self.backdropPath = movie.backdropPath
-        self.genreIDS = movie.genreIDS
-        self.id = movie.id
-        self.originalLanguage = movie.originalLanguage
-        self.originalTitle = movie.originalTitle
-        self.overview = movie.overview
-        self.popularity = movie.popularity
-        self.posterPath = movie.posterPath
-        self.releaseDate = movie.releaseDate
-        self.title = movie.title
-        self.video = movie.video
-        self.voteCount = movie.voteCount
-        self.voteAverage = movie.voteAverage
+        adult = movie.adult
+        backdropPath = movie.backdropPath
+        genreIDS = movie.genreIDS
+        id = movie.id
+        originalLanguage = movie.originalLanguage
+        originalTitle = movie.originalTitle
+        overview = movie.overview
+        popularity = movie.popularity
+        posterPath = movie.posterPath
+        releaseDate = movie.releaseDate
+        title = movie.title
+        video = movie.video
+        voteCount = movie.voteCount
+        voteAverage = movie.voteAverage
     }
 }
