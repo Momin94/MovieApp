@@ -66,8 +66,8 @@ class MoviesTableViewController: UITableViewController {
         let destinationController = storyboard.instantiateViewController(withIdentifier: "moviedetail") as! MovieDetailsViewController
         let movieIndex = indexPath.row
         
-        destinationController.movieGenreText = MovieVMarray[movieIndex].genreIDS.description
-        
+        destinationController.movieGenreText = //MovieVMarray[movieIndex].genreIDS.description
+            MovieVMarray[movieIndex].popularity.description
         destinationController.movieDateText = MovieVMarray[movieIndex].releaseDate
         destinationController.movieOverviewText = MovieVMarray[movieIndex].overview
         destinationController.movieTitleText = MovieVMarray[movieIndex].title

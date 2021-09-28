@@ -128,6 +128,7 @@
 		297AE75C26FC61CD0031FC43 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				29A9EE55270366C20065CD07 /* Storyboards */,
 				297AE79026FC61FB0031FC43 /* APIServices */,
 				297AE78F26FC61ED0031FC43 /* Controllers */,
 				297AE78E26FC61E20031FC43 /* View Models */,
@@ -191,6 +192,13 @@
 				297AE79126FC62B10031FC43 /* ApiService.swift */,
 			);
 			path = APIServices;
+			sourceTree = "<group>";
+		};
+		29A9EE55270366C20065CD07 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		42BC0AC840C10305211B3CB1 /* Pods */ = {
