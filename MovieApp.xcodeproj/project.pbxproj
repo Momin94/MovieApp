@@ -135,9 +135,7 @@
 				297AE78D26FC61DA0031FC43 /* Models */,
 				297AE75D26FC61CD0031FC43 /* AppDelegate.swift */,
 				297AE75F26FC61CD0031FC43 /* SceneDelegate.swift */,
-				297AE76326FC61CD0031FC43 /* Main.storyboard */,
 				297AE76626FC61CE0031FC43 /* Assets.xcassets */,
-				297AE76826FC61CE0031FC43 /* LaunchScreen.storyboard */,
 				297AE76B26FC61CE0031FC43 /* Info.plist */,
 			);
 			path = MovieApp;
@@ -197,6 +195,8 @@
 		29A9EE55270366C20065CD07 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				297AE76826FC61CE0031FC43 /* LaunchScreen.storyboard */,
+				297AE76326FC61CD0031FC43 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

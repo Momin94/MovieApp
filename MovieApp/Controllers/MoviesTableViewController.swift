@@ -67,7 +67,7 @@ class MoviesTableViewController: UITableViewController {
         let movieIndex = indexPath.row
         
         destinationController.movieGenreText = //MovieVMarray[movieIndex].genreIDS.description
-            MovieVMarray[movieIndex].popularity.description
+            MovieVMarray[movieIndex].voteCount.description
         destinationController.movieDateText = MovieVMarray[movieIndex].releaseDate
         destinationController.movieOverviewText = MovieVMarray[movieIndex].overview
         destinationController.movieTitleText = MovieVMarray[movieIndex].title
