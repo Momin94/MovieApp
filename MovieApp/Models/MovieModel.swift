@@ -29,7 +29,7 @@ class Result: Codable {
     let backdropPath: String
     let genreIDS: [Int]
     let id: Int
-    let originalLanguage: OriginalLanguage
+    let originalLanguage: String
     let originalTitle, overview: String
     let popularity: Double
     let posterPath, releaseDate, title: String
@@ -57,7 +57,7 @@ class Result: Codable {
         self.backdropPath = backdropPath
         self.genreIDS = genreIDS
         self.id = id
-        self.originalLanguage = originalLanguage
+        self.originalLanguage = ""
         self.originalTitle = originalTitle
         self.overview = overview
         self.popularity = popularity

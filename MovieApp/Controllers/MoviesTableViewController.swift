@@ -17,12 +17,6 @@ class MoviesTableViewController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "movieCell")
 
         getData()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     func getData() {
@@ -48,7 +42,6 @@ class MoviesTableViewController: UITableViewController {
         let imageURL = URL(string: "https://image.tmdb.org/t/p/w500/\(MVM.posterPath)")!
         cell.imageView?.sd_setImage(with: imageURL)
         cell.textLabel?.text = MVM.title
-        cell.accessoryType = .detailDisclosureButton
         return cell
     }
 

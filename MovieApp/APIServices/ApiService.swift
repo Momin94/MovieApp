@@ -13,6 +13,11 @@ class ApiService: NSObject
     
     static let shareInstance = ApiService()
     
+    func initialAPICall()
+    {
+        
+    }
+    
     func getPopularMovies(completion: @escaping ([Result], Error?)->())
     {
        let urlString =  "https://api.themoviedb.org/3/movie/popular?api_key=4c4170e285c8fd140fb81350cf566a45&page=1"
