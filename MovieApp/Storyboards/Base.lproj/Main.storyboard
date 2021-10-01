@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6iM-e5-sWs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6iM-e5-sWs">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +20,7 @@
                         <color key="sectionIndexBackgroundColor" systemColor="systemYellowColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="200" id="l1c-iq-vgO">
-                                <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="200"/>
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l1c-iq-vgO" id="vZo-gB-ODA">
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
@@ -39,12 +40,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD7-XT-XMG">
-                                            <rect key="frame" x="342" y="169" width="20.666666666666686" height="20"/>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="pD7-XT-XMG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rzf-QK-KJn" secondAttribute="trailing" constant="8" symbolic="YES" id="9G6-1l-WDg"/>
                                         <constraint firstAttribute="bottom" secondItem="rzf-QK-KJn" secondAttribute="bottom" id="BQw-FG-5lN"/>
                                         <constraint firstItem="rzf-QK-KJn" firstAttribute="top" secondItem="vZo-gB-ODA" secondAttribute="top" id="Ezw-Yh-3Ue"/>
                                         <constraint firstItem="rzf-QK-KJn" firstAttribute="centerY" secondItem="qgh-V2-vLR" secondAttribute="centerY" id="OoZ-Dr-s9E"/>
@@ -52,9 +49,7 @@
                                         <constraint firstItem="rzf-QK-KJn" firstAttribute="top" secondItem="vZo-gB-ODA" secondAttribute="topMargin" constant="-11" id="TgX-7d-5hO"/>
                                         <constraint firstItem="rzf-QK-KJn" firstAttribute="centerY" secondItem="vZo-gB-ODA" secondAttribute="centerY" id="Ths-uI-7N9"/>
                                         <constraint firstItem="rzf-QK-KJn" firstAttribute="leading" secondItem="vZo-gB-ODA" secondAttribute="leadingMargin" constant="-20" id="fEf-QI-Mgr"/>
-                                        <constraint firstItem="pD7-XT-XMG" firstAttribute="bottom" secondItem="vZo-gB-ODA" secondAttribute="bottomMargin" constant="-41" id="fOk-oh-Vlt"/>
                                         <constraint firstItem="qgh-V2-vLR" firstAttribute="leading" secondItem="rzf-QK-KJn" secondAttribute="trailing" constant="50" id="lG6-kV-pOz"/>
-                                        <constraint firstItem="pD7-XT-XMG" firstAttribute="trailing" secondItem="vZo-gB-ODA" secondAttribute="trailingMargin" constant="-18.333333333333314" id="zIZ-KB-Qja"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -98,7 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GCX-j6-Yx0">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="90" width="390" height="700"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="movieimage" image="TestImageLarge.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="caI-Ki-KQt">
@@ -160,7 +155,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pno-ei-iOM"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="movieDate" destination="IMw-Qs-gyj" id="pOD-zy-uaH"/>
@@ -172,16 +167,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Psw-Hg-VL3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316.9230769230767" y="-588.62559241706163"/>
+            <point key="canvasLocation" x="1844.6153846153845" y="89.5734597156398"/>
         </scene>
     </scenes>
     <resources>
         <image name="TestImageLarge.jpg" width="5250" height="3450"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
